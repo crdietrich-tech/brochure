@@ -133,7 +133,7 @@ nav.menu a:hover{color:var(--ink)}
 .radar{background:var(--gold-soft)}
 .radar .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
 .radar-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
-.radar-row{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-data);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.radar-row{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-body);font-size:15px;border-bottom:1px solid var(--line);padding-bottom:8px}
 .radar-row:last-of-type{border-bottom:0}
 .radar-row span:first-child{color:var(--muted)}
 @media (max-width:860px){.radar .in{grid-template-columns:1fr}}
@@ -278,6 +278,9 @@ section[id]{scroll-margin-top:84px}
   .chip{padding:8px 11px;font-size:13px}
 }
 
+.eco-card li.destacado{background:var(--eco-dd);border-radius:5px;padding:7px 10px;margin:6px 0 0 -18px;list-style-position:inside;font-weight:500}
+.eco-card li.destacado strong{font-weight:700;color:var(--ink)}
+.radar-row span:last-child{font-weight:500;text-align:right}
 footer{background:var(--sand-deep);color:var(--ink-soft);border-top:1px solid var(--sand-line);font-size:13px}
 footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-block:22px}
 </style>
@@ -320,7 +323,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
   </div>
   <div class="eco-grid">
     <div class="eco-col">
-      <div class="eco-card c-dd"><h3>D&amp;D Group Consultores</h3><span class="role">Finanzas, gestión y desarrollo de negocios O&amp;G</span><ul><li>Diagnóstico económico-financiero</li><li>Reingeniería y control de gestión</li><li>Financiamiento: SGR y bancos</li><li>Valuación y planes de negocio</li><li>Desarrollo Oil &amp; Gas, con el Ing. Carlos Etcheverry, consultor especialista en O&amp;G para Latinoamérica</li></ul></div>
+      <div class="eco-card c-dd"><h3>D&amp;D Group Consultores</h3><span class="role">Finanzas, gestión y desarrollo de negocios O&amp;G</span><ul><li>Diagnóstico económico-financiero</li><li>Reingeniería y control de gestión</li><li>Financiamiento: SGR y bancos</li><li>Valuación y planes de negocio</li><li class="destacado">Desarrollo Oil &amp; Gas, con el <strong>Ing. Carlos Etcheverry</strong>, consultor especialista en O&amp;G para Latinoamérica</li></ul></div>
       <div class="eco-card c-wi"><h3>Wiruk</h3><span class="role">Automatización e IA aplicada</span><ul><li>Automatización de procesos</li><li>IA aplicada con retorno medible</li><li>Tableros de gestión operativos</li><li>Diseño de soluciones a medida</li></ul></div>
     </div>
     <div class="eco-figure">
@@ -362,8 +365,8 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
   <div class="svc-grid">
     <div class="svc"><h3>Diagnóstico financiero y administrativo</h3><p>Revisión rápida de la empresa para separar síntomas de causas y definir prioridades.</p><ul><li>Ciclo de caja y capital de trabajo</li><li>Márgenes por producto o cliente</li><li>Estructura de deuda</li></ul></div>
     <div class="svc"><h3>Reingeniería financiera y administrativa</h3><p>Reordenamos deuda, procesos y circuitos administrativos para recuperar caja y control.</p><ul><li>Reestructuración de pasivos</li><li>Circuitos de cobranzas y pagos</li><li>Políticas de tesorería</li></ul></div>
-    <div class="svc"><h3>Estructuración de financiamiento</h3><p>Diseñamos la estructura y presentamos la carpeta ante bancos, SGR y mercado de capitales.</p><ul><li>Avales SGR y cheques avalados</li><li>Líneas bancarias PyME</li><li>Financiamiento de inversiones</li></ul></div>
-    <div class="svc"><h3>Valuación de empresas y due diligence</h3><p>Valor de la empresa y revisión financiera antes de comprar, vender, sumar socios o reorganizar.</p><ul><li>Valuación por flujos y múltiplos</li><li>Due diligence pre-adquisición</li><li>Planificación de sucesión</li></ul></div>
+    <div class="svc"><h3>Estructuración de financiamiento</h3><p>Diseñamos la estructura y presentamos la carpeta ante bancos y SGR.</p><ul><li>Avales SGR y cheques avalados</li><li>Líneas bancarias PyME</li><li>Financiamiento de inversiones</li></ul></div>
+    <div class="svc"><h3>Valuación, due diligence y venta de empresas</h3><p>Valor de la empresa y revisión financiera antes de comprar, vender, sumar socios o reorganizar. Si decidís vender, nos ocupamos de conseguir el comprador.</p><ul><li>Valuación por flujos y múltiplos</li><li>Due diligence pre-adquisición</li><li>Búsqueda de compradores y acompañamiento en la venta</li></ul></div>
     <div class="svc"><h3>Planes estratégicos y tableros de control</h3><p>Pasar de "la empresa soy yo" a medir, priorizar y delegar, con tableros que se actualizan solos.</p><ul><li>Conducción por objetivos</li><li>Tableros de control con IA</li><li>Delegación efectiva</li></ul></div>
     <div class="svc"><h3>Planes de negocio y nuevos proyectos</h3><p>Proyecciones, diferenciación en el mercado y estrategia comercial para aumentar las chances de éxito.</p><ul><li>Business plan</li><li>Start-up de proyectos</li><li>Desarrollo de negocios</li></ul></div>
     <div class="svc"><h3>Optimización y mejora de procesos</h3><p>Detectamos cuellos de botella y redefinimos actividades para bajar costos y ganar eficiencia.</p><ul><li>Reingeniería de procesos</li><li>Roles y objetivos medibles</li><li>Procesos con IA</li></ul></div>
@@ -381,7 +384,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
   <div class="steps">
     <div class="step"><h3>Diagnóstico</h3><span class="sub">Integral</span><p>Relevamos números, procesos y deuda. En pocos días tenés un mapa claro de la situación.</p></div>
     <div class="step"><h3>Plan</h3><span class="sub">Por etapas</span><p>Prioridades y metas medibles, ordenadas en etapas que la empresa puede sostener.</p></div>
-    <div class="step"><h3>Financiamiento</h3><span class="sub">Estructurado</span><p>Diseñamos la estructura y la presentamos ante bancos, SGR y mercado de capitales.</p></div>
+    <div class="step"><h3>Financiamiento</h3><span class="sub">Estructurado</span><p>Diseñamos la estructura y la presentamos ante bancos y SGR.</p></div>
     <div class="step"><h3>Ejecución</h3><span class="sub">Coordinada</span><p>Coordinamos a todo el ecosistema: consultoría, abastecimiento, logística y tecnología.</p></div>
     <div class="step"><h3>Control</h3><span class="sub">De gestión</span><p>Un tablero mide la evolución y nos reunimos para ajustar el rumbo.</p></div>
   </div>
@@ -404,22 +407,6 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
     <div class="radar-row"><span>Opinión</span><span>Perspectiva D&amp;D, cada lunes</span></div>
   </div>
 </div></section>
-
-<section id="clientes"><div class="in">
-  <div class="sec-head">
-    <span class="eyebrow">Clientes y aliados</span>
-    <h2>Nos entusiasma crecer y enfrentar juntos nuevos desafíos</h2>
-  </div>
-  <div class="logo-group"><h3>PyMEs</h3><div class="logos">
-    <span class="chip">IAN Servicios de Ingeniería y Construcción</span><span class="chip">Tech Mantenimiento</span><span class="chip">Bermatech Desarrollos Industriales</span><span class="chip">BM Inspecciones</span><span class="chip">GinoMac</span><span class="chip">Cisne Negro</span><span class="chip">Grupo Sur</span><span class="chip">L&amp;G Transporte</span><span class="chip">Norvic</span><span class="chip">Tina</span><span class="chip">Mauad</span><span class="chip">Valpob</span>
-  </div></div>
-  <div class="logo-group"><h3>Emprendedores</h3><div class="logos">
-    <span class="chip">Lavanda</span><span class="chip">Moscas</span><span class="chip">Alma Llena</span>
-  </div></div>
-  <div class="logo-group"><h3>Aliados estratégicos</h3><div class="logos">
-    <span class="chip">Banco Coinag</span><span class="chip">ArgenPymes SGR</span><span class="chip">Australis Capital</span>
-  </div></div>
-  </div></section>
 
 <section id="nosotros" style="background:var(--surface);border-block:1px solid var(--line)"><div class="in">
   <div class="about">
@@ -451,7 +438,6 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
       <div><small>WhatsApp</small><div class="contact-people"><a class="wa-link" href="https://wa.me/5492994203520?text=Hola%20Alberto%2C%20vi%20el%20brochure%20de%20D%26D%20Group%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Alberto Dietrich · +54 9 299 420-3520</a><a class="wa-link" href="https://wa.me/5492996351948?text=Hola%20Marcelo%2C%20vi%20el%20brochure%20de%20D%26D%20Group%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Marcelo Dietrich · +54 9 299 635-1948</a></div></div>
       <div><small>Correo</small><a class="wa-link" href="mailto:crdietrich@dydgroupconsultores.com">crdietrich@dydgroupconsultores.com</a></div>
       <div><small>Redes</small><a class="wa-link ig-link" href="https://www.instagram.com/dydgroupconsultores/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span>@dydgroupconsultores</span></a></div>
-      <div><small>Oficina</small><span>Neuquén (8300), Patagonia Argentina</span></div>
     </div>
   </div>
   <form id="form-contacto" novalidate>
@@ -461,7 +447,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
       <label for="f-empresa">Empresa<input id="f-empresa" name="empresa" autocomplete="organization"></label>
     </div>
     <label for="f-tema">¿En qué te podemos ayudar?<select id="f-tema" name="tema">
-      <option>Diagnóstico financiero</option><option>Financiamiento (bancos, SGR)</option><option>Valuación o due diligence</option><option>Abastecimiento internacional</option><option>Logística internacional</option><option>Automatización e IA</option><option>Procesos y tableros de control</option><option>Plan de negocios</option><option>Otro</option>
+      <option>Diagnóstico financiero</option><option>Financiamiento (bancos, SGR)</option><option>Valuación, due diligence o venta de la empresa</option><option>Abastecimiento internacional</option><option>Logística internacional</option><option>Automatización e IA</option><option>Procesos y tableros de control</option><option>Plan de negocios</option><option>Otro</option>
     </select></label>
     <label for="f-msg">Contanos brevemente tu situación<textarea id="f-msg" name="mensaje"></textarea></label>
     <p class="form-err" id="form-err" hidden>Escribí tu nombre para que sepamos quién nos consulta.</p>
