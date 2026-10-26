@@ -15,6 +15,7 @@
 <link rel="icon" href="https://brochure.dydgroupconsultores.com/icon.png">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -25,6 +26,7 @@
   --sand:#E8DCBF; --sand-deep:#DCCCA6; --sand-line:#CDBB92; --ink-soft:#4A4538; --field:#FFFDF7;
   --gold:#7D7130; --olive:#C4B463; --gold-soft:#ECE6C4;
   --n-actual:#2C5F93; --n-actual-bg:#E1EAF4; --n-nuevo:#2E7D46; --n-nuevo-bg:#E3F0E4; --n-falta:#B3372B; --n-falta-bg:#F7E1DC;
+  --eco-dd:#ECE3B5; --eco-dd-s:#9C8B2E; --eco-wi:#F5DDA8; --eco-wi-s:#B98118; --eco-ki:#F1CDB6; --eco-ki-s:#B8582F; --eco-ru:#E4D2C0; --eco-ru-s:#7A5636;
   --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
   --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-data:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -33,12 +35,12 @@
   --bg:#1B1A17; --surface:#24231F; --ink:#EEEAE0; --muted:#A9A69C; --line:#3A3832;
   --sand:#2E281D; --sand-deep:#3A3224; --sand-line:#4E4430; --ink-soft:#D6CFBE; --field:#24201A;
   --gold:#D2C46E; --olive:#C4B463; --gold-soft:#34311F;
-  --n-actual:#86B4E3; --n-actual-bg:#1D2A39; --n-nuevo:#7FCB92; --n-nuevo-bg:#1F3324; --n-falta:#F08C7C; --n-falta-bg:#3A221E; color-scheme:dark}}
+  --n-actual:#86B4E3; --n-actual-bg:#1D2A39; --n-nuevo:#7FCB92; --n-nuevo-bg:#1F3324; --n-falta:#F08C7C; --n-falta-bg:#3A221E; --eco-dd:#3A3520; --eco-dd-s:#D2C46E; --eco-wi:#43331A; --eco-wi-s:#E8B455; --eco-ki:#45281E; --eco-ki-s:#E39070; --eco-ru:#3A2C22; --eco-ru-s:#C9A07E; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1B1A17; --surface:#24231F; --ink:#EEEAE0; --muted:#A9A69C; --line:#3A3832;
   --sand:#2E281D; --sand-deep:#3A3224; --sand-line:#4E4430; --ink-soft:#D6CFBE; --field:#24201A;
   --gold:#D2C46E; --olive:#C4B463; --gold-soft:#34311F;
-  --n-actual:#86B4E3; --n-actual-bg:#1D2A39; --n-nuevo:#7FCB92; --n-nuevo-bg:#1F3324; --n-falta:#F08C7C; --n-falta-bg:#3A221E; color-scheme:dark}
+  --n-actual:#86B4E3; --n-actual-bg:#1D2A39; --n-nuevo:#7FCB92; --n-nuevo-bg:#1F3324; --n-falta:#F08C7C; --n-falta-bg:#3A221E; --eco-dd:#3A3520; --eco-dd-s:#D2C46E; --eco-wi:#43331A; --eco-wi-s:#E8B455; --eco-ki:#45281E; --eco-ki-s:#E39070; --eco-ru:#3A2C22; --eco-ru-s:#C9A07E; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -184,8 +186,11 @@ textarea{min-height:110px;resize:vertical}
 .eco-card ul{margin:4px 0 0;padding-left:18px;font-size:14px;display:flex;flex-direction:column;gap:3px}
 .eco-svg{width:100%;max-width:440px;height:auto;display:block;margin:0 auto}
 .eco-halo{fill:none;stroke:var(--sand-line);stroke-width:1.5}
-.eco-seg{stroke:var(--gold);stroke-width:1.5}
-.eco-seg.s1{fill:var(--gold-soft)} .eco-seg.s2{fill:var(--sand)} .eco-seg.s3{fill:var(--surface)} .eco-seg.s4{fill:var(--sand-deep)}
+.eco-seg{stroke-width:2}
+.eco-seg.s1{fill:var(--eco-dd);stroke:var(--eco-dd-s)} .eco-seg.s2{fill:var(--eco-wi);stroke:var(--eco-wi-s)} .eco-seg.s3{fill:var(--eco-ru);stroke:var(--eco-ru-s)} .eco-seg.s4{fill:var(--eco-ki);stroke:var(--eco-ki-s)}
+.eco-card.c-dd h3::before{background:var(--eco-dd-s)} .eco-card.c-wi h3::before{background:var(--eco-wi-s)} .eco-card.c-ki h3::before{background:var(--eco-ki-s)} .eco-card.c-ru h3::before{background:var(--eco-ru-s)}
+.eco-card{padding-left:14px;border-left:3px solid transparent}
+.eco-card.c-dd{border-left-color:var(--eco-dd)} .eco-card.c-wi{border-left-color:var(--eco-wi)} .eco-card.c-ki{border-left-color:var(--eco-ki)} .eco-card.c-ru{border-left-color:var(--eco-ru)}
 .eco-n{font-family:var(--f-display);font-weight:650;fill:var(--ink);text-anchor:middle}
 .eco-l{font-family:var(--f-body);font-size:11.5px;fill:var(--muted);text-anchor:middle}
 .eco-core{fill:var(--gold)}
@@ -213,6 +218,66 @@ textarea{min-height:110px;resize:vertical}
 .wa-float:hover{filter:brightness(.96)}
 @media (max-width:520px){.wa-float span{display:none}.wa-float{padding:14px}.wa-link{font-size:13.5px}}
 
+/* Instagram y acciones */
+.top-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+nav.menu+.top-actions{margin-left:0}
+.ig-btn{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--sand-line);color:var(--ink);text-decoration:none}
+.ig-btn:hover{border-color:var(--gold);color:var(--gold)}
+.ig-link{display:inline-flex;align-items:center;gap:8px}
+.ig-link svg{flex:none}
+.short{display:none}
+.f-links{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+section[id]{scroll-margin-top:84px}
+
+/* Celular */
+@media (max-width:960px){
+  .top .in{flex-wrap:wrap;row-gap:8px;padding-block:10px 0}
+  nav.menu{display:flex;order:3;flex-basis:100%;margin:0 -2px;overflow-x:auto;gap:8px;padding:2px 2px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  nav.menu::-webkit-scrollbar{display:none}
+  nav.menu a{flex:none;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13.5px;color:var(--ink)}
+  .top .btn{margin-left:0}
+  nav.menu+.top-actions{margin-left:auto}
+  section[id]{scroll-margin-top:118px}
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  section{padding-block:48px}
+  .sec-head{margin-bottom:26px}
+  h2{font-size:27px}
+  .lead{font-size:16.5px}
+  .logo{width:92px}
+  .long{display:none}.short{display:inline}
+  .top .btn{padding:9px 14px}
+  .ig-btn{width:38px;height:38px}
+  .hero{padding-block:40px 36px}
+  .hero h1{font-size:33px}
+  .hero .lead{margin-top:16px}
+  .hero .ctas{margin-top:22px}
+  .hero .ctas .btn{flex:1 1 100%}
+  .fact{grid-template-columns:78px minmax(0,1fr);padding:12px 0}
+  .fact b{font-size:26px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc{padding:20px 18px}
+  .eco-grid{gap:26px}
+  .eco-svg{max-width:340px}
+  .eco-motto{margin-top:28px;font-size:18px;padding:14px 4px}
+  .steps{grid-template-columns:1fr 1fr;gap:22px 18px}
+  .step::before{font-size:34px}
+  .step h3{font-size:18px}
+  .step p{font-size:14px}
+  .radar .in{gap:24px}
+  .about{gap:30px}
+  .team{grid-template-columns:1fr;gap:16px;margin-top:30px}
+  .member{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:14px;align-items:center}
+  .member .mono{width:64px;height:64px;font-size:22px;margin:0;grid-row:1/3}
+  .member b{align-self:end}
+  .member span{align-self:start}
+  form{padding:18px}
+  .form-btns .btn{flex:1 1 100%}
+  body footer .in{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  .chip{padding:8px 11px;font-size:13px}
+}
+
 footer{background:var(--sand-deep);color:var(--ink-soft);border-top:1px solid var(--sand-line);font-size:13px}
 footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-block:22px}
 </style>
@@ -226,7 +291,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
   <nav class="menu" aria-label="Secciones">
     <a href="#ecosistema">Ecosistema</a><a href="#servicios">Servicios</a><a href="#metodo">Cómo trabajamos</a><a href="#radar">Radar D&amp;D</a><a href="#nosotros">Nosotros</a>
   </nav>
-  <a class="btn btn-gold" href="#contacto">Agendá una reunión</a>
+  <div class="top-actions"><a class="ig-btn" href="https://www.instagram.com/dydgroupconsultores/" target="_blank" rel="noopener" aria-label="Instagram de D&amp;D Group"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a><a class="btn btn-gold" href="#contacto"><span class="long">Agendá una reunión</span><span class="short">Contacto</span></a></div>
 </div></header>
 
 <main id="inicio">
@@ -255,8 +320,8 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
   </div>
   <div class="eco-grid">
     <div class="eco-col">
-      <div class="eco-card"><h3>D&amp;D Group Consultores</h3><span class="role">Finanzas, gestión y desarrollo de negocios O&amp;G</span><ul><li>Diagnóstico económico-financiero</li><li>Reingeniería y control de gestión</li><li>Financiamiento: SGR y bancos</li><li>Valuación y planes de negocio</li><li>Desarrollo Oil &amp; Gas, con el Ing. Carlos Etcheverry, consultor especialista en O&amp;G para Latinoamérica</li></ul></div>
-      <div class="eco-card"><h3>Wiruk</h3><span class="role">Automatización e IA aplicada</span><ul><li>Automatización de procesos</li><li>IA aplicada con retorno medible</li><li>Tableros de gestión operativos</li><li>Diseño de soluciones a medida</li></ul></div>
+      <div class="eco-card c-dd"><h3>D&amp;D Group Consultores</h3><span class="role">Finanzas, gestión y desarrollo de negocios O&amp;G</span><ul><li>Diagnóstico económico-financiero</li><li>Reingeniería y control de gestión</li><li>Financiamiento: SGR y bancos</li><li>Valuación y planes de negocio</li><li>Desarrollo Oil &amp; Gas, con el Ing. Carlos Etcheverry, consultor especialista en O&amp;G para Latinoamérica</li></ul></div>
+      <div class="eco-card c-wi"><h3>Wiruk</h3><span class="role">Automatización e IA aplicada</span><ul><li>Automatización de procesos</li><li>IA aplicada con retorno medible</li><li>Tableros de gestión operativos</li><li>Diseño de soluciones a medida</li></ul></div>
     </div>
     <div class="eco-figure">
 <svg class="eco-svg" viewBox="0 0 400 400" role="img" aria-labelledby="eco-t eco-d"><title id="eco-t">Ecosistema D&amp;D Group</title><desc id="eco-d">Cuatro capacidades alrededor de la empresa cliente: D&amp;D Group arriba, Wiruk a la derecha, Ruca Logistics abajo y Kika Trading a la izquierda.</desc>
@@ -281,8 +346,8 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
 <circle cx="200" cy="200" r="70" class="eco-core"/><rect x="156" y="160" width="88" height="20" rx="10" class="eco-pill"/><text x="200" y="174" class="eco-pill-t">EL CLIENTE</text><text x="200" y="206" class="eco-c">Tu empresa</text><text x="200" y="226" class="eco-c2">en el centro</text></svg>
     </div>
     <div class="eco-col">
-      <div class="eco-card"><h3>Kika Trading</h3><span class="role">Abastecimiento internacional</span><ul><li>Oficinas en Buenos Aires, Shenzhen y Houston</li><li>Desarrollo y homologación de proveedores</li><li>Negociación comercial y reducción de costos</li><li>Inspecciones y control de calidad</li><li>Compra por cuenta y orden</li><li>Coordinación integral del abastecimiento</li></ul></div>
-      <div class="eco-card"><h3>Ruca Logistics</h3><span class="role">Logística internacional</span><ul><li>Transporte marítimo, aéreo, terrestre y multimodal</li><li>Carga proyecto y sobredimensionada</li><li>Seguros y documentación</li><li>Tracking online de embarques</li><li>Aduana y depósito</li></ul></div>
+      <div class="eco-card c-ki"><h3>Kika Trading</h3><span class="role">Abastecimiento internacional</span><ul><li>Oficinas en Buenos Aires, Shenzhen y Houston</li><li>Desarrollo y homologación de proveedores</li><li>Negociación comercial y reducción de costos</li><li>Inspecciones y control de calidad</li><li>Compra por cuenta y orden</li><li>Coordinación integral del abastecimiento</li></ul></div>
+      <div class="eco-card c-ru"><h3>Ruca Logistics</h3><span class="role">Logística internacional</span><ul><li>Transporte marítimo, aéreo, terrestre y multimodal</li><li>Carga proyecto y sobredimensionada</li><li>Seguros y documentación</li><li>Tracking online de embarques</li><li>Aduana y depósito</li></ul></div>
     </div>
   </div>
   <p class="eco-motto">Un solo diagnóstico · un solo plan · un solo responsable</p>
@@ -385,6 +450,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
     <div class="cdata">
       <div><small>WhatsApp</small><div class="contact-people"><a class="wa-link" href="https://wa.me/5492994203520?text=Hola%20Alberto%2C%20vi%20el%20brochure%20de%20D%26D%20Group%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Alberto Dietrich · +54 9 299 420-3520</a><a class="wa-link" href="https://wa.me/5492996351948?text=Hola%20Marcelo%2C%20vi%20el%20brochure%20de%20D%26D%20Group%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Marcelo Dietrich · +54 9 299 635-1948</a></div></div>
       <div><small>Correo</small><a class="wa-link" href="mailto:crdietrich@dydgroupconsultores.com">crdietrich@dydgroupconsultores.com</a></div>
+      <div><small>Redes</small><a class="wa-link ig-link" href="https://www.instagram.com/dydgroupconsultores/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span>@dydgroupconsultores</span></a></div>
       <div><small>Oficina</small><span>Neuquén (8300), Patagonia Argentina</span></div>
     </div>
   </div>
@@ -410,7 +476,7 @@ footer .in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betwee
 
 <footer><div class="in">
   <span>© D&amp;D Group · Consultores en gestión empresaria · Neuquén, Patagonia Argentina</span>
-  <span><a href="https://monitor.dydgroupconsultores.com">Radar D&amp;D</a> · <a href="https://dydgroupconsultores.com.ar">dydgroupconsultores.com.ar</a></span>
+  <span class="f-links"><a class="ig-link" href="https://www.instagram.com/dydgroupconsultores/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span>@dydgroupconsultores</span></a><a href="https://monitor.dydgroupconsultores.com">Radar D&amp;D</a><a href="https://dydgroupconsultores.com.ar">dydgroupconsultores.com.ar</a></span>
 </div></footer>
 
 <script>
